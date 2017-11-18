@@ -1,23 +1,16 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-    <title>Notes</title>
-    <style>
-      body {
-        margin: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <dom-module id="note-app">
-      <template>Hello, note app!</template>
-      <script>
-        Polymer({
-          is: 'note-app'
-        });
-      </script>
-    </dom-module>
-  </body>
-</html>
+<link rel="import" href="bower_components/note-app-elements/na-elements.html">
+<link rel="import" href="bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
+<link rel="import" href="bower_components/polymerfire/polymerfire.html">
+
+<dom-module id="note-app">
+  <template>
+    <style include="note-app-shared-styles"></style>
+    <na-toolbar></na-toolbar>
+    <na-login></na-login>
+  </template>
+  <script>
+    Polymer({
+      is: 'note-app'
+    });
+  </script>
+</dom-module>
